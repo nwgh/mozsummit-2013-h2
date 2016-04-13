@@ -1,0 +1,218 @@
+<!DOCTYPE HTML>
+<!-- <html lang="en-US"> -->
+<html lang="en-US" class="fade nonumbers">
+<!-- 
+  ^ a class of "fade" makes slides fade smoothly into one another
+ -->
+<!-- <html lang="en-US" class="nonumbers"> -->
+<!-- 
+  If you want no numbers on the slides add a "nonumbers" class 
+  to the HTML element.
+  Adding a class of "fade" will make slides fade into another. 
+-->
+<head>
+  <meta charset="UTF-8">
+  <title>HTTP/2 - The Next Generation</title>
+<!-- 
+  If you upload your slides to the web, ensure that you have 
+  a good title - this shows up in search results and social
+  media links
+ -->
+  <meta name="viewport" content="width=device-width, user-scalable=yes">
+  <link rel="stylesheet" href="themes/mozilla/styles/style.css">
+</head>
+<body class="list">
+  <header class="caption">
+    <h1>HTTP/2 - The Next Generation</h1>
+    <p class="footer">
+      The Necko Team
+      <a href="mailto:dev-tech-network@lists.mozilla.org">dev-tech-network@lists.mozilla.org</a>
+    </p>
+  </header>
+  <aside class="talkdescription">
+    <button onclick="goFullScreen()">Go fullscreen</button></p>
+    <p class="abstract">
+      <strong>Abstract: </strong>
+       A quick overview of HTTP/2 - the next protocol to power the open web, from Mozilla Summit 2013.
+    </p>
+  </aside>
+
+<!-- 
+    Simply copy the whole block for each slide you want.
+  Special slides get extra classes. Each slide needs an ID 
+  to allow for bookmarking and target jumping.
+-->
+
+  <div id="cover" class="slide shout"><div>
+    <section>
+      <header>
+        <h2>HTTP/2</h2>
+      </header>
+      <small style="position: absolute; bottom: 150px; right: 100px;">
+          The next generation of the protocol that powers the open web.
+      </small>
+      <small class="byline">
+        The Necko Team, Mozila Summit Innovation Fair, 5 October 2013
+      </small>
+    </section>
+  </div></div>
+
+  <div id="what" class="slide oneline"><div>
+    <section>
+      <header>
+        <h2>What does it do?</h2>
+      </header>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="whatdetails" class="slide"><div>
+    <section>
+      <header>
+        <h2>What does it do?</h2>
+      </header>
+
+      <ul class="inner">
+        <li class="active"><strong>Unlimited</strong> parallelism!</li>
+        <li>Prioritization</li>
+        <li>Scalablity</li>
+        <li>Always Secure</li>
+        <li>Server Push</li>
+      </ul>
+
+      <footer class="notes">
+          Unlimited parallelism - no more 6 resources per server limitation. No more sharding.<br>
+          Prioritization - don't care about cat pictures? Tell the server to send dog pictures first!<br>
+          Scalability - connection management prevents using lots of resources.<br>
+          Always secure - we're committed to not running HTTP/2 unless it's over TLS.<br>
+          Server push - "Users who downloaded index.html <i>also</i> downloaded...".
+      </footer>
+    </section>
+  </div></div>  
+
+  <div id="whytop" class="slide oneline"><div>
+    <section>
+      <header>
+        <h2>Why?</h2>
+      </header>
+      <footer class="notes">
+          Why do we want to do this? Doesn't HTTP/1 work great already?
+      </footer>
+    </section>
+  </div></div>  
+
+  <div id="whydetails" class="slide"><div>
+    <section>
+      <header>
+        <h2>Why?</h2>
+      </header>
+      <img src="pictures/smallphones.jpg" 
+           class="right" 
+           alt="Firefox OS phones">
+
+      <ul class="inner">
+        <li class="active">Performance (especially for mobile!)</li>
+        <li>One object = One URI</li>
+        <li>Promote Security</li>
+        <li>Promote Scalability</li>
+        <li>Play nice with others</li>
+      </ul>
+
+      <small class="credits">
+        <a href="http://www.flickr.com/photos/codepo8/9506545800/">
+          Image by Chris Heilmann
+        </a>
+      </small>
+      <footer class="notes">
+          We want to improve performance for our users, especially in the mobile space.<br>
+          We want to promote the URI-per-object model of the web.<br>
+          Promoting security and scalability protects the future of the web.<br>
+          The connection management in HTTP/2 plays much nicer with the internet at large than HTTP/1 does.
+      </footer>
+    </section>
+  </div></div>  
+
+  <div id="showme" class="slide oneline"><div>
+    <section>
+      <header>
+        <h2>Show Me</h2>
+      </header>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>  
+
+  <div id="http-waterfall" class="slide"><div>
+    <section>
+      <header>
+        <h2>The Mobile Web on HTTP/1</h2>
+      </header>
+      <img src="pictures/waterfall-http.png" 
+           class="middle shadow"
+           alt="Here's the web on HTTP/1"
+           style="width: 75%">
+      <small class="credits">
+        Harvard University Mobile Wikipedia page, served over HTTP/1 - 4.4s load time
+        (<a href="https://developers.google.com/speed/articles/spdy-for-mobile">
+          Google
+        </a>)
+      </small>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="spdy-waterfall" class="slide"><div>
+    <section>
+      <header>
+        <h2>The Mobile Web on HTTP/2</h2>
+      </header>
+      <img src="pictures/waterfall-spdy.png" 
+           class="middle shadow"
+           alt="Here's the web on HTTP/2"
+           style="width: 75%">
+      <small class="credits">
+        Harvard University Mobile Wikipedia page, served over SPDY - 2.6s load time
+        (<a href="https://developers.google.com/speed/articles/spdy-for-mobile">
+          Google
+        </a>)
+      </small>
+      <footer class="notes">
+          http://en.m.wikipedia.
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="status" class="slide"><div>
+    <section>
+      <header>
+        <h2>Status</h2>
+      </header>
+
+      <ul>
+        <li class="active">SPDY/2, SPDY/3, SPDY/3.1, HTTP/2-draft04, HTTP/2-draft06 &mdash; All contributed to the community.</li>
+        <li>Facebook, Twitter, Google, Wordpress, NginX<sup>1</sup>, Apache<sup>2</sup> &mdash; All have one of the above available <strong>today</strong>.</li>
+        <li>Firefox, Chrome(ium), Opera, IE11 &mdash; All can speak SPDY/3 (or higher).</li>
+        <li>Standardization expected within a year.</li>
+      </ul>
+
+      <footer class="footnotes">
+          1 - SPDY/2 only<br>
+          2 - Requires external mod_spdy
+      </footer>
+
+      <footer class="notes">
+          NginX - only SPDY/2
+          Apache - requires mod_spdy addon
+          Firefox - 11+ (13+ enabled by default, 15+ for SPDY/3, 27+ for SPDY/3.1)
+      </footer>
+    </section>
+  </div></div>  
+
+<!-- end slide block -->
+
+  <script src="scripts/script.js"></script>
+  <!-- Copyright © 2010–2012 Vadim Makeev — pepelsbey.net -->
+</body>
+</html>
